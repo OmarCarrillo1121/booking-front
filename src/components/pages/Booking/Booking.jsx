@@ -1,5 +1,9 @@
-import React from "react";
+import { Navbar } from "./index";
 
 export default function Booking() {
-  return <div>Booking</div>;
+  return (
+    <main>
+      <div></div>
+    </main>
+  );
 }
