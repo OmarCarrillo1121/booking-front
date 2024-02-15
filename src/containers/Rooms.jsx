@@ -7,7 +7,7 @@ import Content from "../containers/ContentRooms";
 import Footer from "../containers/Footer";
 
 function Rooms() {
-  const [rooms, setRooms] = useState([]);
+  const [data, setData] = useState([]);
   const url = "http://localhost:3001";
 
   useEffect(() => {
@@ -15,7 +15,7 @@ function Rooms() {
       try {
         const resp = await axios.get(`${url}/rooms`);
         const responseData = resp.data || [];
-        setRooms(responseData);
+        setData(responseData);
       } catch (error) {
         console.log(error);
       }
@@ -23,7 +23,7 @@ function Rooms() {
     fetchData();
   }, []);
 
-  console.log(rooms);
+  console.log(data);
 
   return (
     <div className="container-fluid text-center">
@@ -49,7 +49,7 @@ function Rooms() {
               </tr>
             </thead>
             <tbody>
-              {rooms.map(({ roomNo, roomType, roomPrice }) => (
+              {data.map(({ roomNo, roomType, roomPrice }) => (
                 <tr className="bg-white border-b" key={roomNo}>
                   <td className="px-6 py-4">{roomNo}</td>
                   <td className="px-6 py-4">{roomType}</td>
