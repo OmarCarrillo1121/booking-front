@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./Sidebar.styles.css";
 
 export default function Sidebar() {
@@ -8,18 +9,19 @@ export default function Sidebar() {
       </div>
       <hr className="text-dark" />
       <div className="list-group list-group-flush">
-        <a className="list-group-item py-2">
+        <Link to={`/`} className="list-group-item py-2">
           <i className="bi bi-house fs-5 me-2"></i>
           <span className="fs-5">Home</span>
-        </a>
-        <a className="list-group-item py-3">
+        </Link>
+
+        <Link to={`/bookings`} className="list-group-item py-3">
           <i className="bi bi-bookmark fs-5 me-2"></i>
           <span className="fs-5">Bookings</span>
-        </a>
-        <a className="list-group-item py-3">
+        </Link>
+        <Link to={`/rooms`} className="list-group-item py-3">
           <i className="bi bi-door-closed fs-5 me-2"></i>
           <span className="fs-5">Rooms</span>
-        </a>
+        </Link>
       </div>
     </div>
   );

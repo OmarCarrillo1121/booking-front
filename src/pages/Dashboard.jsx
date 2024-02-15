@@ -1,9 +1,13 @@
-import Content from "../containers/Content";
-import Footer from "../containers/Footer";
-import Navbar from "../containers/Navbar";
+import { useLocation } from "react-router-dom";
 import Sidebar from "../containers/Sidebar";
+import Navbar from "../containers/Navbar";
+import Content from "../containers/ContentRooms";
+import Footer from "../containers/Footer";
 
 function App() {
+  let location = useLocation();
+  console.log(location);
+
   return (
     <>
       <div className="container-fluid text-center">
